@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "react": "registry:npm/react#15.0.1+20160601175240",
+    "react-dom": "registry:npm/react-dom#15.0.1+20160705210405"
+  },
+  "globalDependencies": {
+    "expect": "registry:dt/expect#1.13.4+20160316155526",
+    "mocha": "registry:dt/mocha#2.2.5+20160720003353",
+    "node": "registry:dt/node#6.0.0+20160720070758"
+  }
+}

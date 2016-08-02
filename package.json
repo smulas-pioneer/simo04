@@ -1,0 +1,23 @@
+{
+  "name": "simo04",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "react-ts-scripts": "0.1.10",
+    "mocha": "^2.5.3",
+    "expect": "^1.20.2",
+    "ts-node": "^1.2.1",
+    "jsdom": "^9.4.1"
+  },
+  "dependencies": {
+    "react": "^15.2.1",
+    "react-dom": "^15.2.1",
+    "redux": "^3.5.2"
+  },
+  "scripts": {
+    "start": "react-ts-scripts start",
+    "build": "react-ts-scripts build",
+    "eject": "react-ts-scripts eject",
+    "test": "mocha test/config/testSetup.js --opts test/config/mocha.opts"
+  }
+}
