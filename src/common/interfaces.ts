@@ -1,6 +1,6 @@
 export interface StoreModel {
-    products: Product[];
-    list: ListItem[];
+    products?: Product[];
+    list?: ListItem[];
 }
 
 export interface Product {

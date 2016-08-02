@@ -1,6 +1,6 @@
 import * as React from 'react';
 import './App.scss';
-let logo = require('./logo.svg');
+let logo = require('../logo.svg');
 
 
 class App extends React.Component<any, any> {

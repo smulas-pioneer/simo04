@@ -2,14 +2,14 @@ import * as Redux from 'redux';
 
 export class ReducerHost<T> {
 
-    private handlers: { [type: string]: (state: T, action: Action<any>) => T };
+    private handlers: { [type: string]: (state: T, action: Action<any>) => T } = {};
 
     public register(actionType: string, reducer: (state: T, action: Redux.Action) => T) {
         this.handlers[actionType] = reducer;
     }
 
     public reducer = () => {
-        return (state: T, action: Action<any>) => {
+        return (state: T , action: Action<any>) => {
             const reducer = this.handlers[action.type];
             if (reducer) {
                 return reducer(state, action);
@@ -45,18 +45,6 @@ export function actionCreator<T>(type: string, payload: T) {
     }
 }
 
-
-
-
-
-
-let host = new ReducerHost<model.Product[]>();
-
-host.register('ADD_PRODUCT', (s: model.Product[], a: Action<model.Product>) => {
-    return s.concat(a.payload);
-});
-
-export default host.reducer();
 
 
 

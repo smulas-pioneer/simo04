@@ -1,7 +1,5 @@
 import * as mocha from 'mocha';
 import * as  expect from 'expect';
-import * as C from '../src/reducers/default';
-
 
 describe('Test', () => {
     it('Action Creator Base Class', () => {
@@ -25,8 +23,6 @@ describe('Test', () => {
 
         let t2 = dog.kkk;
         t2();
-
-
 
     })
 });
