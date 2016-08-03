@@ -1,5 +1,7 @@
 @import 'common';
-
+body {
+  background-color: $bg_color2;
+}
 
 .App {
   text-align: center;
@@ -29,13 +31,22 @@
 }
 
 a {
-  color: $bg_color1;
+  color: $color1;
 }
+
 ul.list {
+
     li {
       text-align: left;
       list-style: none;
+
+      span {
+        min-width: 120px;
+        display: inline-block;
+      }
+
       a {
+        margin-left: 40px;
         color: $cmdcolor;
         cursor: pointer;
       }
@@ -44,4 +55,5 @@ ul.list {
 
 .checked {
   color: lightgray;
+  text-decoration: line-through;
 }

@@ -29,14 +29,14 @@ const ProductList: React.StatelessComponent<ProductListProps> = (props) => {
         <h2>Product Database</h2>
         <ul className='list'>
             {props.products.map((p, i) => {
-                return <li key={i}>{p.id} - {p.name}
-                    {'   '}
+                return <li key={i}>
+                    <span>{p.id} - {p.name}</span>
                     <a onClick= {_ => { props.dispatch(Actions.removeProduct(p.id)) } }>[remove]</a>
                 </li>
             }) }
         </ul>
         <hr/>
-        Add New: {' '}         
+        add new: {' '}         
         <input  type='text'
             ref={e => input = e  }
             onKeyDown = {handleKeyDown}

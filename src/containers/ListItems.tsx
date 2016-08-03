@@ -24,12 +24,9 @@ const ListItems: React.StatelessComponent<ListItemProps> = (props) => {
         <h2>Current List</h2>
         <ul className='list'>
             {props.items.map((p, i) => {
-                return <li key={i} className={p.checked && 'checked'}>
-                    {p.id} - {p.name}
-                    {'   '}
+                return <li key={i}>
+                    <span className={p.checked && 'checked'} style={{cursor:'pointer'}} onClick= { _ => { props.dispatch(Actions.toggleListItem(p.id)) } }>{p.name}</span>
                     <a onClick= { _ => { props.dispatch(Actions.removeListItem(p.id)) } }>[remove]</a>
-                    {'   '}
-                    <a onClick= { _ => { props.dispatch(Actions.toggleListItem(p.id)) } }>[toggle]</a>
                 </li>
             }) }
         </ul>
