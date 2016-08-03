@@ -12,3 +12,7 @@ export interface ListItem {
     id: string;
     checked: boolean;
 }
+
+export const TYPES = {
+    ADD_PRODUCT:'ADD_PRODUCT'
+}
