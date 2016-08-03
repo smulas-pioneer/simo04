@@ -28,6 +28,9 @@
   to { transform: rotate(360deg); }
 }
 
+a {
+  color: $bg_color1;
+}
 ul.list {
     li {
       text-align: left;
